@@ -6,6 +6,8 @@ var initCompile = require('./lib/compile');
 var tagNode = require('./lib/tag-node');
 var textNode = require('./lib/text-node');
 
+module.exports = Translate;
+
 function Translate(rootPath) {
   this.resolve = typeof rootPath === 'function' ?
     rootPath :
@@ -25,7 +27,7 @@ Translate.prototype.context = function(store) {
 
 function initResolve(root) {
   if (!~root.indexOf('.')) root = '.' + root;
-  if (!root.charAt(root.length - 1) === '.') root += '.';
+  if (root.charAt(root.length - 1) !== '.') root += '.';
 
   return function resolve(path) {
     return root + path;
