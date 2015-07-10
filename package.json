@@ -4,8 +4,8 @@
   "description": "translation component for react",
   "main": "index.js",
   "peerDependencies": {
-    "onus": "^0.1.0",
-    "react": "^0.12.2"
+    "onus": ">=0.2.0",
+    "react": ">=0.12.2"
   },
   "devDependencies": {},
   "scripts": {
