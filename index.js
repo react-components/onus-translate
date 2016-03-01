@@ -6,7 +6,8 @@ var initCompile = require('./lib/compile');
 var tagNode = require('./lib/tag-node');
 var textNode = require('./lib/text-node');
 
-module.exports = Translate;
+exports = module.exports = Translate;
+exports['default'] = exports;
 
 function Translate(rootPath) {
   this.resolve = typeof rootPath === 'function' ?
